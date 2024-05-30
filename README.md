@@ -182,11 +182,11 @@ VAR Diferencia = DIVIDE(PrecioPromedioAnual - PrecioInicial, [Precio_Promedio_An
 RETURN 
 IF(Diferencia > 0.1, Diferencia, BLANK())
 ```
-### Los resultados arrojados por este analisis encontro que los autos que menos se devaluan son los siguientes
-| marca, modelo y version        | porcentaje de devaluacion anual |
+### Los resultados arrojados por este analisis de los autos que menos se devaluan son los siguientes
+| marca, modelo y versión        | porcentaje de devaluacion anual |
 | -------------------------------| ------------------------------- | 
 | Volkswagen Golf 1.6 Format     |                             0,12|              
 | Toyota Etios 1.5 Xls           |                             0,35|
 | Peugeot 2008 1.6 Feline        |                             0,37|
 | Renault Captur 1.6 Intens Cvt  |                             0,59|
-|Peugeot 2008 1.6 Thp Sport      |                             0,75|
+| Peugeot 2008 1.6 Thp Sport     |                             0,75|
