@@ -24,7 +24,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 ```
 luego creamos una funcion recopila información sobre autos de un año específico de múltiples páginas en Mercado Libre, usando web scraping, y devuelve listas con los modelos, años, precios y monedas de los autos encontrados.
-```
+```Python
 def get_all_pages(starting_offset, increment, year):
     offset = starting_offset
     model_list = []
@@ -85,19 +85,19 @@ def get_all_pages(starting_offset, increment, year):
     return model_list, year_list, price_list, currency_list
 ```
 Parámetros iniciales
-```
+```Python
 starting_offset = 0
 increment = 48
 ```
 Inicializar listas globales para almacenar todos los datos
-```
+```Python
 all_models = []
 all_years = []
 all_prices = []
 all_currencies = []
 ```
 Recorrer los años del 2003 al 2022
-```
+```Python
 for year in range(2003, 2023):
     model_list, year_list, price_list, currency_list = get_all_pages(starting_offset, increment, year)
     all_models.extend(model_list)
@@ -106,7 +106,7 @@ for year in range(2003, 2023):
     all_currencies.extend(currency_list)
 ```
 Crear el DataFrame con todos los datos
-```
+```Python
 df = pd.DataFrame({
     "Modelo": all_models,
     "Año": all_years,
@@ -115,11 +115,11 @@ df = pd.DataFrame({
 })
 ```
 Reordenar las columnas
-```
+```Python
 df = df[["Modelo", "Año", "Moneda","Precio"]]
 ```
 Guardar el DataFrame en un archivo CSV
-```
+```Python
 df.to_csv("autos_2003_2022_mercado_libre.csv", index=False)
 ```
 ### Procesamiento y Normalización de Datos
@@ -136,7 +136,7 @@ df.to_csv("autos_2003_2022_mercado_libre.csv", index=False)
 - Visualizaciones: Se generaron gráficos y tablas para mostrar la depreciación promedio de los autos por modelo.
 ### Las medidas creadas en Dax son las siguientes
 para calcular el precio inicial
-```
+```Dax
 Precio_Inicial = 
 CALCULATE(
     AVERAGE(autos_2003_2022_mercado_libre[Precio normalizado]),
@@ -158,7 +158,7 @@ CALCULATE(
 )
 ```
 funcion que calcula el precio promedio anual de cada modelo
-```
+```Dax
 Precio_Promedio_Anual = 
 CALCULATE(
     AVERAGE(autos_2003_2022_mercado_libre[Precio normalizado]),
@@ -174,7 +174,7 @@ CALCULATE(
 )
 ```
 Ahora debemos calcular la diferencia anual porcentual de cada modelo para asi encontrar que que menor tasa de debaluacion tenga 
-```
+```Dax
 Diferencia_Anual_Porcentual = 
 VAR PrecioInicial = [Precio_Inicial]
 VAR PrecioPromedioAnual = [Precio_Promedio_Anual]
