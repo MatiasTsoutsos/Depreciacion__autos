@@ -158,7 +158,7 @@ CALCULATE(
 )
 ```
 funcion que calcula el precio promedio anual de cada modelo
-```yaml
+```sql
 Precio_Promedio_Anual = 
 CALCULATE(
     AVERAGE(autos_2003_2022_mercado_libre[Precio normalizado]),
