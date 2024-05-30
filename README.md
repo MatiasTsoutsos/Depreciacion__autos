@@ -136,7 +136,7 @@ df.to_csv("autos_2003_2022_mercado_libre.csv", index=False)
 - Visualizaciones: Se generaron gráficos y tablas para mostrar la depreciación promedio de los autos por modelo.
 ### Las medidas creadas en Dax son las siguientes
 para calcular el precio inicial
-```html
+```yaml
 Precio_Inicial = 
 CALCULATE(
     AVERAGE(autos_2003_2022_mercado_libre[Precio normalizado]),
@@ -158,7 +158,7 @@ CALCULATE(
 )
 ```
 funcion que calcula el precio promedio anual de cada modelo
-```html
+```yaml
 Precio_Promedio_Anual = 
 CALCULATE(
     AVERAGE(autos_2003_2022_mercado_libre[Precio normalizado]),
@@ -174,7 +174,7 @@ CALCULATE(
 )
 ```
 Ahora debemos calcular la diferencia anual porcentual de cada modelo para asi encontrar que que menor tasa de debaluacion tenga 
-```html
+```yaml
 Diferencia_Anual_Porcentual = 
 VAR PrecioInicial = [Precio_Inicial]
 VAR PrecioPromedioAnual = [Precio_Promedio_Anual]
