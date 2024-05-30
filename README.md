@@ -134,7 +134,7 @@ df.to_csv("autos_2003_2022_mercado_libre.csv", index=False)
 - Importación de Datos: La base de datos normalizada fue importada a Power BI.
 - Creación de Medidas en DAX: Se crearon funciones en DAX para calcular la depreciación promedio de los autos.
 - Visualizaciones: Se generaron gráficos y tablas para mostrar la depreciación promedio de los autos por modelo.
-### Las medidas creadas en dax son las siguientes
+### Las medidas creadas en Dax son las siguientes
 para calcular el precio inicial
 ```
 Precio_Inicial = 
