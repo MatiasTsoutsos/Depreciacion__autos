@@ -18,7 +18,7 @@ Este proyecto analiza la devaluación de autos usados entre los años 2003 y 202
 - Tecnologías Utilizadas: Python (librerías: BeautifulSoup, pandas, Requests)
 
 Como primer paso para la recoleccion de los datos importamos las librerias que utilizaremos en este proyecto de web scraping 
-```
+```Python
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
