@@ -128,8 +128,10 @@ df.to_csv("autos_2003_2022_mercado_libre.csv", index=False)
 - Tareas Realizadas:
     - Limpieza de datos (remover duplicados, manejar valores nulos).
     - Normalización de precios a pesos Argentinos (tipo de cambio oficial).
-#### Para la normalizacion de los datos en Excel utilizamos la funcion Si de la siguiente manera
+#### Para la normalizacion de los datos en Excel utilizamos la funcion `Si` de la siguiente manera
+```
 - =SI(C2="US$";D2*871;D2)
+```
 ### Análisis de Datos en Power BI
 - Importación de Datos: La base de datos normalizada fue importada a Power BI.
 - Creación de Medidas en DAX: Se crearon funciones en DAX para calcular la depreciación promedio de los autos.
@@ -182,8 +184,9 @@ VAR Diferencia = DIVIDE(PrecioPromedioAnual - PrecioInicial, [Precio_Promedio_An
 RETURN 
 IF(Diferencia > 0.1, Diferencia, BLANK())
 ```
-### Los resultados arrojados por este analisis de los autos que menos se devaluan son los siguientes
-| marca, modelo y versión        | porcentaje de devaluacion anual |
+## Resultados
+### Autos con la Menor Depreciación
+| Marca, Modelo y Versión        | Porcentaje de devaluacion anual |
 | -------------------------------| ------------------------------- | 
 | Volkswagen Golf 1.6 Format     |                             0,12|              
 | Toyota Etios 1.5 Xls           |                             0,35|
