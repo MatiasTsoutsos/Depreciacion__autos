@@ -12,23 +12,6 @@ Este proyecto analiza la devaluación de autos usados entre los años 2003 y 202
     - Analizar los datos en Power BI.
     - Generar visualizaciones y reportes que ayuden a entender la depreciación de los autos.
 
-### Recolección de Datos
-- Fuente de Datos: Mercado Libre
-- Método de Recolección: Web scraping
-- Tecnologías Utilizadas: Python (librerías: BeautifulSoup, pandas, Requests)
-
-### Procesamiento y Normalización de Datos
-- Formato Original de los Datos: CSV
-- Software Utilizado: Microsoft Excel
-- Tareas Realizadas:
-    - Limpieza de datos (remover duplicados, manejar valores nulos).
-    - Normalización de precios a pesos Argentinos (tipo de cambio oficial).
-
-### Análisis de Datos en Power BI
-- Importación de Datos: La base de datos normalizada fue importada a Power BI.
-- Creación de Medidas en DAX: Se crearon funciones en DAX para calcular la depreciación promedio de los autos.
-- Visualizaciones: Se generaron gráficos y tablas para mostrar la depreciación promedio de los autos por modelo.
-
 ## Resultados
 ### Autos con la Menor Depreciación
 | Marca, Modelo y Versión        | Porcentaje de devaluacion anual |
